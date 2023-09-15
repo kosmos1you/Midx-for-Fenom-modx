@@ -13,6 +13,7 @@
 ]}
 <!--pdoResources пример вывода на Fenom-->
 <!--MIDX пример вывода на Fenom-->
+{set $rows = json_decode($_modx->resource.НАЗВАНИЕ TV-поля, true)}
 {foreach $rows as $row}
   <div class="item">
     <div class="title">{$row.title} - это поле указанные в  midx</div>
