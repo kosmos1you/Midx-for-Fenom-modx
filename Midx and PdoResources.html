@@ -17,11 +17,24 @@
 {foreach $rows as $row}
   <div class="item">
     <div class="title">{$row.title} - это поле указанные в  midx</div>
+   
+    
     <div class="desc">{$row.description} - это поле указанные в  midx</div>
     <div class="image"><img src="{$row.image}" alt="{$row.title}" />- это поле указанные в  midx</div>
   </div>
 {/foreach}
 <!--MIDX пример вывода на Fenom-->
+<!----------------------------->
+ВЫВОД НА FENOM С ПАРАМЕТРОМ [[+idx]]
+{$idx+1} - выводит с 1 элемента, а не с 0.
+<!----------------------------->
+{foreach $rows as  $idx => $row}
+  <div class="item">
+    <div class="count">{$idx+1} - это поле для авто вывода нумерации</div>
+    <div class="title">{$row.title} - это поле указанные в  midx</div>
+  </div>
+{/foreach}
+<!----------------------------->
 <!----------------------------->
 <!--MIDX пример вывода на Fenom определенного id ( тут это - 15)-->
 {set $rows = json_decode(15 | resource : 'migx_tv', true)}
