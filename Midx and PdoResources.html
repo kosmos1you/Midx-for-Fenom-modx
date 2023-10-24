@@ -1,19 +1,24 @@
 <!----------------------------->
 <!--pdoResources пример вывода на Fenom-->
 {'!pdoResources' | snippet : [
-  'parents' => '56',
-  'depth' => '0',
-  'tpl' => 'news-post',
-  'includeTVs' => 'news_img',
-  'includeContent' => 1,
-  'sortdir' => 1,
-  'sortby'=> '{ "publishedon":"DESC"}',
-  'showHidden' => 'ASC'
-]}
+    'parents' => '9',
+    'depth' => '0',
+    'tvPrefix' => '',
+    'tpl' => 'catalog-items',
+    'includeTVs' => 'img',
+    'includeContent' => 1,
+    'sortdir' => 1,
+    'limit' => '999',
+    'sortby'=> '{ "publishedon":"DESC"}',
+    'showHidden' => 'ASC'
+  ]}
 <!----------------------------->
-  <!--pdoResources пример вывода на Fenom-->
+  <!--pdoResources - чанк CATALOG-ITEMS-->
 <!----------------------------->
-
+<a href="{$uri}">
+	<img src="{$img}">
+	<p>{$pagetitle}</p>
+</a>
 <!----------------------------->
   <!--MIDX пример вывода на Fenom-->
 <!----------------------------->
