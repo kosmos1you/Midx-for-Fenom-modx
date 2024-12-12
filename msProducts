@@ -1,0 +1,66 @@
+<!----------------------------->
+<!--msProducts пример вывода на Fenom-->
+{'!msProducts' | snippet : [
+    'parents' => 0,
+      'tpl' => 'msProductsRowTpl',
+      'limit' => 16,
+      'where' => '{"class_key": "msCategory"}',
+      'sortby'=> '{ "menuindex":"ADC"}',
+  ]}
+<!----------------------------->
+  <!--msProducts - чанк msProductsRowTpl-->
+<!----------------------------->
+<div class="item ms2_product" itemtype="http://schema.org/Product" itemscope>
+    	<a href="{$id | url}" class="absolute"></a>
+    <meta itemprop="description" content="{$description = $description ?: $pagetitle}">
+    <meta itemprop="name" content="{$pagetitle}">
+    
+	<div class="labels">
+	   <span>{if $popular?}<i>&#xf762;</i>{/if}</span>
+	   <span>{if $new?}<i>&#xf578;</i>{/if}</span>
+	</div>
+	
+	<form method="post" class="ms2_form">
+        <input type="hidden" name="id" value="{$id}">
+        <input type="hidden" name="count" value="1">
+        <input type="hidden" name="options" value="[]">
+	    
+	    {if $thumb?}
+            <img src="{$thumb}" class="product" alt="{$pagetitle}" title="{$pagetitle}" itemprop="image"/>
+        {else}
+            <img src="{'assets_url' | option}components/minishop2/img/web/ms2_small.png"
+                srcset="{'assets_url' | option}components/minishop2/img/web/ms2_small@2x.png 2x"
+                class="product" alt="{$pagetitle}" title="{$pagetitle}"/>
+        {/if}
+	    
+        {'!msProductOptions' | snippet : [
+            'product' => $id,
+            'onlyOptions' => 'rolls_count',
+            'tpl' => 'msProductOptionsTpl'
+        ]}
+    	
+    	<a href="{$id | url}" class="name">{$pagetitle}</a>
+    	<div class="description" itemtype="http://schema.org/AggregateOffer" itemprop="offers" itemscope>
+    	    <meta itemprop="category" content="{$parent | resource: "pagetitle"}">
+            <meta itemprop="name" content="{$pagetitle}">
+            <meta itemprop="offerCount" content="1">
+            <meta itemprop="price" content="{$price | replace:" ":""}">
+            <meta itemprop="lowPrice" content="{$price | replace:" ":""}">
+            <meta itemprop="priceCurrency" content="RUR">
+    	    {*$description | truncate : 50*}
+    	</div>
+        {*if $old_price?}
+        	<div class="old_price">{$old_price} ₽</div>
+        {/if*}
+        
+    	{if $price != 0}
+        	<div class="price">{$price}</div>
+			    {else}
+	        <!--div class=" no_price-catalog">Попробуйте в ресторане</div-->
+	        <button type="submit" name="ms2_action" value="cart/add" class="to-cart no_price-catalog"  disabled >Попробуйте в ресторане</button>
+		{/if}
+		{if $price != 0}
+            <button type="submit" name="ms2_action" value="cart/add" class="to-cart">В КОРЗИНУ</button>
+		{/if}
+	</form>
+</div>
