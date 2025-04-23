@@ -62,3 +62,14 @@
 <!----------------------------->
 {$_modx->config.phoneCC  | preg_replace : '/[^0-9+]/' : ''}
 
+<!----------------------------->
+  <!--MIDX пример вывода на Fenom определенного  цикла-->
+<!----------------------------->
+
+<div class="stars">
+items- list с значением
+{var $items = $row.star}
+{foreach range(1,$items) as $items index=$i}
+   
+{/foreach}
+</div>
