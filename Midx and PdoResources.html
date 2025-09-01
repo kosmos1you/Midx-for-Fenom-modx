@@ -1,4 +1,33 @@
 <!----------------------------->
+	DOC: https://github.com/fenom-template/fenom/tree/master/docs/ru/tags
+<!----------------------------->
+<!----------------------------->
+  	<!-- switch | if/else  - Fenom-->
+<!----------------------------->
+{switch $color}
+{case 'red', 'scarlet'}
+    Оттенок красного цвета
+{case 'green', 'harlequin'}
+    Оттенок зеленого цвета
+{case 'black', 'grey', 'gray'}
+    Черный цвет
+{case 'white', 'grey', 'gray'}
+    Белый цвет
+{case default, 'unknown'}
+    Неизвестный цвет
+{/switch}
+
+{if <expression1>}
+    {*...some code...*}
+{elseif <expression2>}
+    {*...some code...*}
+{/if}
+	
+<!----------------------------->
+  	<!-- switch | if/else  - Fenom-->
+<!----------------------------->
+
+<!----------------------------->
 <!--pdoResources пример вывода на Fenom-->
 {'!pdoResources' | snippet : [
     'parents' => '9',
@@ -73,3 +102,4 @@ items- list с значением
    
 {/foreach}
 </div>
+
