@@ -14,7 +14,7 @@
 
 ### MODX Revolution (Revo) (Fenom)
 
-- [Заготовки Fenom](./modx_fenom//)
+- [Заготовки Fenom](./modx_fenom/)
 
 ### Работы с изображениями
 
