@@ -11,6 +11,7 @@
 ### MODX Revolution (Revo) (Обычный)
 
 - [Файлы с заготовками по использованию стандартного синтаксиса ](./modx_defulte/)
+- [Документация файловой структуры](https://webinmind.ru/modx/documentation/what-is-modx/directory-structure)
 
 ### MODX Revolution (Revo) (Fenom)
 
@@ -20,3 +21,5 @@
 
 - [Сам каталог](./work_image/)
 - [Webp конвертер для MODX](./work_image/WEB_CONFERT.md)
+
+
