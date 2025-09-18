@@ -20,3 +20,7 @@
 
 - [Сам каталог](./work_image/)
 - [Webp конвертер для MODX](./work_image/WEB_CONFERT.md)
+
+### MODX Revolution (Revo) Формы
+
+- [Реализация checkbox](./modx_form/checkbox.tpl)
