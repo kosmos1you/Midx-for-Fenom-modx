@@ -11,6 +11,7 @@
 ### MODX Revolution (Revo) (Обычный)
 
 - [Файлы с заготовками по использованию стандартного синтаксиса ](./modx_defulte/)
+- [Документация файловой структуры](https://webinmind.ru/modx/documentation/what-is-modx/directory-structure)
 
 ### MODX Revolution (Revo) (Fenom)
 
@@ -24,3 +25,5 @@
 ### MODX Revolution (Revo) Формы
 
 - [Реализация checkbox](./modx_form/checkbox.tpl)
+
+
