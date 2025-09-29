@@ -5,7 +5,7 @@
       'tpl' => 'msProductsRowTpl',
       'limit' => 16,
       'where' => '{"class_key": "msCategory"}',
-      'sortby'=> '{ "menuindex":"ADC"}',
+      'sortby'=> '{ "menuindex":"ASC"}',
   ]}
 <!----------------------------->
   <!--msProducts - чанк msProductsRowTpl-->
